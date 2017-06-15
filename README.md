@@ -11,7 +11,7 @@ Based on the stylish progress button styles by Codrops
 
 ## Installation
 ```shell
-ember install ember-progress-buttons
+ember install ember-progress-button
 ```
 
 ## Usage
