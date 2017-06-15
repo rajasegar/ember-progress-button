@@ -1,5 +1,96 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="container">
+	<!-- Top Navigation -->
+	
+	<header>
+		<h1>Ember Progress Button  <span>Creative effects for Ember async buttons</span></h1>
+		<p class="note">Without support for <em>transform-style: preserve-3d</em> you will see the fallback style (fill horizontal).</p>
+	</header>
+	<div class="wrapper">
+		<section>
+			<h2>fill horizontal</h2>
+      {{#progress-button action=(action 'promiseAction') }}
+        Register
+      {{/progress-button}}
+		</section>
+		<section>
+			<h2>fill vertical</h2>
+      {{#progress-button action=(action 'rejectPromiseAction') vertical=true}}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>shrink horizontal</h2>
+      {{#progress-button action=(action 'promiseAction') style="shrink"}}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>shrink vertical</h2>
+      {{#progress-button action=(action 'promiseAction') style="shrink" vertical=true}}Submit{{/progress-button}}
+		</section>
+	</div> 
 
-{{outlet}}
+  <div class="wrapper">
+		<section>
+			<h2>rotate-angle-bottom <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-angle-bottom"}}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>rotate-angle-top <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-angle-top" }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>rotate-angle-left<br>perspective</h2>
+      {{#progress-button  action=(action 'promiseAction') style="rotate-angle-left" vertical=true }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>rotate-angle-right <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-angle-right" vertical=true }}Submit{{/progress-button}}
+		</section>
+	</div>
+
+  <div class="wrapper">
+		<section>
+			<h2>rotate-side-down <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-side-down" }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>rotate-side-up <br>perspective </h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-side-up" }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>rotate-side-left <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-side-left" }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>rotate-side-right <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-side-right" }}Submit{{/progress-button}}
+		</section>
+	</div>
+
+  <div class="wrapper">
+		<section>
+			<h2>rotate-back <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="rotate-back" }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>flip-open <br>perspective</h2>
+      {{#progress-button action=(action 'promiseAction') style="flip-open" }}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>slide-down <br>horizontal</h2>
+      {{#progress-button action=(action 'promiseAction') style="slide-down"}}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>move-up <br>horizontal</h2>
+      {{#progress-button action=(action 'promiseAction') style="move-up"}}Submit{{/progress-button}}
+		</section>
+	</div>
+
+  <div class="wrapper">
+		<section>
+			<h2>top-line <br>horizontal</h2>
+      {{#progress-button action=(action 'promiseAction') style="top-line"}}Submit{{/progress-button}}
+		</section>
+		<section>
+			<h2>lateral-lines <br>vertical</h2>
+      {{#progress-button  action=(action 'promiseAction') style="lateral-lines" vertical=true}}Submit{{/progress-button}}
+		</section>
+	</div>
+</div>

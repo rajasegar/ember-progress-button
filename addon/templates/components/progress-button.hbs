@@ -1,0 +1,14 @@
+{{#if perspective}}
+  <span class="progress-wrap">
+    <span class="content">
+      {{yield}}
+    </span>
+    <span class="progress">
+      <span class="progress-inner" style={{progressStyle}}></span>
+    </span>
+  </span>
+{{else}}
+  {{#progress-bar progressStyle=progressStyle}}
+    {{yield}}
+  {{/progress-bar}}
+{{/if}}
