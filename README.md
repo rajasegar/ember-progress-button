@@ -55,6 +55,42 @@ Just give any one of the following values for the style attribute of the compone
 
 Some of the above styles may require the *vertical* attribute set to true such as *fill*, *shrink* and *lateral-lines*.
 
+## Theme Customization
+You can customize the button css colors suiting your choice and preference using the following css variables.
+
+```css
+:root {
+    --progress-button-bg: #1d9650; /* Button background color */
+    --progress-button-fg: #fff; /* Button text color */
+    --progress-bar-bg: #0e7138; /* Progress bar color */
+}
+```
+
+For over-riding the Success and Error state icons, you can use any icon fonts and override the below classes.
+Say for example , you want to use font-awesome icons, just set the font-family to *font-awesome* and
+modify the before and after properties like:
+
+```css
+.progress-button .content::before,
+.progress-button .content::after  {
+	font-family: "font-awesome";
+}
+
+.progress-button .content::before {
+	content: "\e600"; /* Checkmark for success */
+}
+
+.progress-button .content::after {
+	content: "\e601"; /* Cross for error */
+}
+```
+
+To have full control for the button appearance you can write your own styles for the button class:
+```css
+.progress-button {
+  /* Put your styles here */
+```
+
 ## Running
 
 * `ember serve`

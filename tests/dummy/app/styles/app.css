@@ -1,2 +1,6 @@
 @import 'normalize.css';
 @import 'demo.css';
+
+:root {
+    /* --progress-button-bg: #ccc; */
+}
