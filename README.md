@@ -1,7 +1,7 @@
 # ember-progress-buttons
 
 [![Build Status](https://travis-ci.org/rajasegar/ember-progress-buttons.svg?branch=master)](https://travis-ci.org/rajasegar/ember-progress-buttons) 
-[![npm](https://img.shields.io/npm/dm/ember-progress-button.svg)](https://www.npmjs.com/package/ember-progress-button)  
+[![npm](https://img.shields.io/npm/dm/ember-progress-button.svg)](https://www.npmjs.com/package/ember-progress-button)
 [![npm version](http://img.shields.io/npm/v/ember-progress-button.svg?style=flat)](https://npmjs.org/package/ember-progress-button "View this project on npm")
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
@@ -10,7 +10,7 @@
 Better User experience with asynchronous actions using Buttons with stylish progress indicators.
 This can be used as an aesthetic alternative to *ember-async-button*
 
-The underlying thing which drives the component click action is a Promise just like your ember-async-button,
+The underlying thing which drives the component click action is a **Promise** just like your ember-async-button,
 but it will show you a progress indicator until the promise object is fulfilled, resolved or rejected.
 
 Hence here you need to specify different texts for different promise states but it will show indications
