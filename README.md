@@ -1,10 +1,10 @@
-# ember-progress-buttons
+# ember-progress-button
 
 [![Build Status](https://travis-ci.org/rajasegar/ember-progress-buttons.svg?branch=master)](https://travis-ci.org/rajasegar/ember-progress-buttons) 
 [![npm](https://img.shields.io/npm/dm/ember-progress-button.svg)](https://www.npmjs.com/package/ember-progress-button)
 [![npm version](http://img.shields.io/npm/v/ember-progress-button.svg?style=flat)](https://npmjs.org/package/ember-progress-button "View this project on npm")
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![EmberObserver](http://emberobserver.com/badges/ember-progress-buttons.svg?branch=master)](http://emberobserver.com/addons/ember-progress-buttons)
+[![EmberObserver](http://emberobserver.com/badges/ember-progress-button.svg?branch=master)](http://emberobserver.com/addons/ember-progress-button)
 
 
 
