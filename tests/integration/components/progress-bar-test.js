@@ -7,13 +7,6 @@ moduleForComponent('progress-bar', 'Integration | Component | progress bar', {
 
 test('it renders', function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{progress-bar}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
   // Template block usage:
   this.render(hbs`
     {{#progress-bar}}
@@ -21,5 +14,49 @@ test('it renders', function(assert) {
     {{/progress-bar}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('span').length, 3);
 });
+
+test('it should yield the content', function(assert) {
+  this.render(hbs`
+    {{#progress-bar}}
+      template block text
+    {{/progress-bar}}
+  `);
+  assert.equal(this.$('.content').text().trim(), 'template block text');
+
+});
+
+test('it should have a progress element inside', function(assert) {
+  this.render(hbs`
+    {{#progress-bar}}
+      template block text
+    {{/progress-bar}}
+  `);
+  assert.equal(this.$('.progress').length, 1);
+
+});
+
+test('it should have a progress-inner element', function(assert) {
+  this.render(hbs`
+    {{#progress-bar}}
+      template block text
+    {{/progress-bar}}
+  `);
+  assert.equal(this.$('.progress-inner').length, 1);
+
+});
+
+test('it should have a default style attribute', function(assert) {
+  this.set('progressStyle','width:0%;opacity:0');
+  this.render(hbs`
+    {{#progress-bar progressStyle=progressStyle}}
+      template block text
+    {{/progress-bar}}
+  `);
+  assert.equal(this.$('.progress-inner').attr('style'), 'width:0%;opacity:0');
+
+});
+
+
+

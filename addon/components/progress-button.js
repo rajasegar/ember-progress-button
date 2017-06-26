@@ -47,12 +47,12 @@ export default Component.extend({
   _stop(status) {
 
     let _statusClass = status >= 0 ? 'state-success' : 'state-error';
-    this.set('status', _statusClass);
-    this.set('isLoading', false);
 
-    Ember.run.later(this, function() {
+    Ember.run(this, function() {
+      this.set('status', _statusClass);
+      this.set('isLoading', false);
       this.set('progress', 0);
-    },0);
+    });
 
     Ember.run.later(this, function() {
       this.set('status', null);
@@ -88,12 +88,29 @@ export default Component.extend({
 
   click() {
 
-    this.set('isLoading', true);
-    this.set('progress', 0);
+    Ember.run(this, () => {
+      this.set('isLoading', true);
+      this.set('progress', 0);
+    });
+
+    let _this = this;
+    Ember.run(this, function() {
+      let progress = 0;
+      let interval = setInterval( function() {
+        progress = Math.min( progress + Math.random() * 0.1, 1 );
+        _this.set('progress', progress);
+
+        if( progress === 1 ) {
+          clearInterval( interval );
+        }
+      }, 200 );
+    });
 
     let params = getWithDefault(this, 'params', []);
     let callbackHandler = (promise) => {
-      set(this, 'promise', promise);
+      Ember.run(this, () => {
+        set(this, 'promise', promise);
+      });
     };
 
     if(typeof this.get('action') === 'function') {
@@ -116,20 +133,6 @@ export default Component.extend({
       let actionArguments = ['action', callbackHandler, ...params];
       this.sendAction(...actionArguments);
     }
-
-    let _this = this;
-    Ember.run.later(this, function() {
-      let progress = 0;
-      let interval = setInterval( function() {
-        progress = Math.min( progress + Math.random() * 0.1, 1 );
-        _this.set('progress', progress);
-
-        if( progress === 1 ) {
-          // _this._stop(1);
-          clearInterval( interval );
-        }
-      }, 200 );
-    }, 0);
 
     // If this is part of a form, it will perform an HTML form
     // submission without returning false to prevent action bubbling
