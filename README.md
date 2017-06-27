@@ -22,7 +22,7 @@ Based on the stylish progress button styles by Codrops
 [Article](https://tympanus.net/codrops/2013/12/12/progress-button-styles/)
 
 ## Demo
-[Demo](http://gleaming-observation.surge.sh)
+[Demo](https://rajasegar.github.io/ember-progress-button/)
 
 ## Installation
 ```shell
