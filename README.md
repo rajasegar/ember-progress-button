@@ -6,9 +6,6 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![EmberObserver](http://emberobserver.com/badges/ember-progress-button.svg?branch=master)](http://emberobserver.com/addons/ember-progress-button)
 
-
-
-
 Better User experience with asynchronous actions using Buttons with stylish progress indicators.
 This can be used as an aesthetic alternative to *ember-async-button*
 
@@ -117,7 +114,6 @@ To have full control for the button appearance you can write your own styles for
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
 
 ## Credits
 * [Codrops](https://tympanus.net/codrops)
