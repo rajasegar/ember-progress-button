@@ -15,7 +15,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/rajasegar/ember-progress-buttons",
+  "repository": "https://github.com/rajasegar/ember-progress-button",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
