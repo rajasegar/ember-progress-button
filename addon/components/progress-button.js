@@ -1,3 +1,12 @@
+/**
+   Ember progress button
+
+   Better User experience with asynchronous actions using Buttons with stylish progress indicators. This can be used as an aesthetic alternative to ember-async-button
+
+   @public
+   @class ember-progress-button
+*/
+
 import Ember from 'ember';
 import layout from '../templates/components/progress-button';
 
@@ -24,8 +33,36 @@ export default Component.extend({
     'vertical:data-vertical',
     'perspective:data-perspective'
   ],
+  /**
+     isDisabled property tells whether the progress is running or active
+     Based on isLoading
+
+     @public
+     @property isDisabled
+     @type { Computed }
+  */
+
   isDisabled: computed.reads('isLoading'),
+  /**
+     isLoading property tells about active progress
+
+     @public
+     @property isLoading
+     @type { Boolean }
+     @default false
+  */
+
   isLoading: false,
+  /**
+     Style property of the progress button.
+     Tells which type of progress bar to render.
+
+     @public
+     @property style
+     @type { String }
+     @default "fill"
+  */
+
   style: 'fill',
   status: null,
   statusTime: 1500,

@@ -1,6 +1,7 @@
 {
   "name": "ember-progress-button",
   "description": "A set of stylish progress buttons for async behaviours in Ember.",
+  "url": "https://github.com/rajasegar/ember-progress-button",
   "version": "0.0.5",
   "options": {
     "paths": [
@@ -11,6 +12,8 @@
     "linkNatives": true,
     "quiet": true,
     "parseOnly": false,
-    "lint": false
+    "lint": false,
+    "themedir": "node_modules/yuidoc-ember-theme",
+    "helpers": ["node_modules/yuidoc-ember-theme/helpers/helpers.js"]
   }
 }
