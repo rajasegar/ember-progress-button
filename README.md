@@ -12,7 +12,7 @@ This can be used as an aesthetic alternative to *ember-async-button*
 The underlying thing which drives the component click action is a **Promise** just like your ember-async-button,
 but it will show you a progress indicator until the promise object is fulfilled, resolved or rejected.
 
-Hence here you need to specify different texts for different promise states but it will show indications
+Hence here you need NOT to specify different texts for different promise states but it will show indications
 through progress, success and error animations for pending, resolved and rejected states respectively.
 
 Based on the stylish progress button styles by Codrops

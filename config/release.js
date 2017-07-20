@@ -5,6 +5,7 @@ var execSync = require('child_process').execSync;
 // For details on each option run `ember help release`
 module.exports = {
   publish: true,
+  yes: true,
   afterPublish: function(project, versions) {
     // Publish dummy app with docs to gh-pages
     runCommand('ember github-pages:commit --message "Released ' + versions.next + '"');
