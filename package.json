@@ -54,6 +54,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "https://rajasegar.github.io/ember-progress-buttons/"
+    "demoURL": "https://rajasegar.github.io/ember-progress-button/"
   }
 }

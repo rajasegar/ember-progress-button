@@ -16,7 +16,7 @@ test('it renders', function(assert) {
   assert.equal(this.$().text().trim(), 'template block text');
 });
 
-test('it should have a progres-button class', function(assert) {
+test('it should have a progress-button class', function(assert) {
   this.render(hbs`
     {{#progress-button}}
       template block text
