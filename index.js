@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-progress-buttons'
+  name: 'ember-progress-button'
 };
